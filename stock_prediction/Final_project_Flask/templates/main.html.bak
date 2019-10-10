@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : GrassyGreen 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140310
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GrassyGreen</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Raleway:400,200,500,600,700,800,300" rel="stylesheet" />
+<link href="../static/css/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../static/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+</head>
+<style>
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 70%; /* Could be more or less, depending on screen size */
+	height: 100%;
+	overflow: scroll;
+}
+/* The Close Button */
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.info_spec {
+	border-top: 1px solid #f0f0f0;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.h_stoke, #story_area, .info_spec, .comment_area {
+	margin: 0 55px;
+	margin-bottom: 30px;
+}
+
+html, body {
+	overflow: auto;
+}
+
+#story_area, #comment .line{
+	border-bottom: 1px solid #f0f0f0;
+}
+
+
+
+
+
+#info_table {
+	width : 100%;
+	border: 1px solid;
+	border-collapse: collapse;
+}
+#info_table td{
+	border : 1px solid;
+	padding : 10px;
+}
+
+
+
+
+
+
+
+.leftColumn {
+  height: 200px;
+  width: 200px;
+}
+
+.rightColumn {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  padding-left: 200px;
+}
+.centerColumn {
+  height: 200px;
+  width: 200px;
+
+} 
+</style>
+<body>
+<div id="wrapper">
+	<div id="menu-wrapper">
+		<div id="menu" class="container">
+			<ul>
+				<li><a href="/">소개</a></li>
+				<li><a href="/about">사용한 아이템</a></li>
+				<li class="current_page_item"><a href="/main">서비스 페이지</a></li>
+				<li><a href="/4">Portfolio</a></li>
+				<li><a href="/5">Contact</a></li>
+			</ul>
+		</div>
+		<!-- end #menu --> 
+	<div id="header-wrapper">
+		<div id="header" class="container">
+		
+			<div id="logo"><h1>종목검색</h1><input type="text" name="cpsearch" id="cpsearch" style="width:250px">&nbsp;<input type="button" id="searchBtn" value="검색" style="width:50px">
+				
+				
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- <div id="banner">
+		
+	</div> -->
+	<div id="page" class="container">
+		<div class="abox">
+            <div>
+                <h1 id = "searchVal">
+                    
+                </h1>
+            </div>
+
+
+			<div class="stoke_list">
+			
+				
+			</div>
+
+            <div>
+                 <img src="{{ url_for('static', filename='img/images.jpg') }}" class="leftColumn" id = "cpPeg">
+                 <img src="{{ url_for('static', filename='img/images2.PNG') }}" class="centerColumn" >
+                 <img src="{{ url_for('static', filename='img/images3.PNG') }}" class="rightColumn">
+            </div>
+		</div>
+       
+        
+		<div id="content">
+			<div class="title">
+				<h2>Integer sit amet aliquet</h2>
+				<span class="byline">Phasellus nec erat sit amet nibh pellentesque congue</span> 
+			</div>
+        </div>
+		<div id="sidebar">
+			
+		</div>
+	</div>
+</div>
+	
+
+<div id="footer-wrapper">
+	<div id="footer" class="container">
+		<div id="box1">
+			<div class="title">
+				<h2>Latest Post</h2>
+			</div>
+			<ul class="style1">
+				<li><a href="#">Semper mod quis eget mi dolore</a></li>
+				<li><a href="#">Quam turpis feugiat sit dolor</a></li>
+				<li><a href="#">Amet ornare in hendrerit in lectus</a></li>
+				<li><a href="#">Consequat etiam lorem phasellus</a></li>
+				<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
+				<li><a href="#">Semper mod quisturpis nisi</a></li>
+			</ul>
+		</div>
+		<div id="box2">
+			<div class="title">
+				<h2>Popular Links</h2>
+			</div>
+			<ul class="style1">
+				<li><a href="#">Semper mod quis eget mi dolore</a></li>
+				<li><a href="#">Quam turpis feugiat sit dolor</a></li>
+				<li><a href="#">Amet ornare in hendrerit in lectus</a></li>
+				<li><a href="#">Consequat etiam lorem phasellus</a></li>
+				<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
+				<li><a href="#">Semper mod quisturpis nisi</a></li>
+			</ul>
+		</div>
+		<div id="box3">
+			<div class="title">
+				<h2>Follow Us</h2>
+			</div>
+			<p>Proin eu wisi suscipit nulla suscipit interdum. Aenean lectus lorem, imperdiet magna.</p>
+			<ul class="contact">
+				<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+				<li><a href="#" class="icon icon-facebook"><span>Facebook</span></a></li>
+				<li><a href="#" class="icon icon-dribbble"><span>Dribbble</span></a></li>
+				<li><a href="#" class="icon icon-tumblr"><span>Tumblr</span></a></li>
+				<li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
+			</ul>
+				<a href="#" class="button">Read More</a> </div>
+		</div>
+	</div>
+</div>
+<div id="copyright" class="container">
+	<p>&copy; 노한나 | 이시열 | 정규식 | 최승욱 | 서재성 | 최환석 | 김광명</p>
+</div>
+
+
+
+
+<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<div id="content">
+
+				<div class="article" style="display: block;">
+					<div class="stoke_info">
+
+
+						<!-- 주식정보(wide) -->
+
+
+						<h3 class="h_stoke">
+
+							<p id="name" style="font-size: 30px;"></p>
+
+							<!-- N=a:ifo.title -->
+
+
+							<strong id="code"> </strong>
+						</h3>
+						<div align="right"><input type="button" id="stock_btn" value="주식예측"></div>
+
+						<div class="info_spec">
+							
+						</div>
+						<div>
+							<table id="info_table">
+								<tr>
+									<td rowspan="2" id="today"><h2 style="font-size: 30px;"></h2><br><p style="font-size: 15px;"></p></td>
+									<td id="yest"></td>
+									<td id="high"></td>
+									<td id="trade"></td>
+								</tr>
+								<tr>
+									
+									<td id="start"></td>
+									<td id="low"></td>
+									<td id="trade_price"></td>
+								</tr>
+							</table>
+						</div>
+						<div id="story_area"></div>
+					</div>
+					<div class="stock_img" align="center">
+				
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<script>
+		
+			$('#searchBtn').click(function() {
+					
+					var txt = "";
+					txt = $("#cpsearch").val();
+					
+					console.log(txt);
+					
+							$.ajax({
+								url : "/search/"+txt,
+								success : function(data) {
+									console.log("입력완료");
+									var list = data.split(',');
+									
+									var stoke_html = "";
+									for(var i in list){
+										stoke_html += "<div class=\"stoke\">"+list[i]+"</div>";
+										if( i % 5 == 0){
+											stoke_html += "<br>";
+										}
+									}
+									$(".stoke_list").html(stoke_html);
+
+								},
+								error : function(e) {
+									alert("입력실패");
+								}
+
+							});
+						});
+
+
+			$('.stoke_list').click(function(e) {
+					console.log(e.target.textContent);
+					var name = e.target.textContent;
+					var list = [];
+					var stoke_name = "";
+					var stoke_code = "";
+					var today = "";
+					var compare = "";
+					var yest = "";
+					var high = "";
+					var low = "";
+					var start = "";
+					var trade = "";
+					var trade_price = "";
+					console.log(name);
+					$.ajax({
+								url : "/detail/"+name,
+								success : function(data) {
+									console.log("입력완료");
+									console.log(data);
+									list = data.split("/");
+									console.log(list);
+									stoke_name = list[0];
+									stoke_code = list[38];
+									today = list[1];
+									compare = list[6]+" "+list[7]+" "+list[8] + " | " + list[11]+list[12]+list[14];
+									yest = list[16]+" "+list[17];
+									high = list[19]+" "+list[20].slice(0,list[20].length/2)+" "+list[21]+" "+list[22].slice(0,list[22].length/2)+list[23];
+									low = list[29]+ " "+list[30].slice(0,list[30].length/2)+" "+list[31]+" "+list[32]+list[33];
+									start = list[27]+" "+list[28].slice(0,list[28].length/2);
+									trade = list[24]+" "+list[25];
+									trade_price = list[34]+" "+list[35]+list[37]
+									console.log(stoke_name);
+									$('#name').text(stoke_name);
+									console.log(stoke_code);
+									$('#code').text(stoke_code);
+									console.log(today);
+									console.log(compare);
+									$('#today h2').text(today.slice(5,-4));
+									$('#today p').text(compare);
+									console.log(yest);
+									$('#yest').text(yest);
+									console.log(high);
+									$('#high').text(high);
+									console.log(low);
+									$('#low').text(low);
+									console.log(start);
+									$('#start').text(start);
+									console.log(trade);
+									$('#trade').text(trade);
+									console.log(trade_price);
+									$('#trade_price').text(trade_price);
+									//$('.info_spec').html(data);
+								},
+								error : function(e) {
+									alert("입력실패");
+									console.log(e);
+								}
+
+			});
+
+
+					$("#myModal").css({
+						"display" : "block"
+					});
+
+
+
+			});
+
+			$(".close").click(function() {
+							$("#myModal").css({
+								"display" : "none"
+							});
+							$('#name').text("");
+							$('#code').text("");
+							$('#today h2').text("");
+							$('#today p').text("");
+							$('#yest').text("");
+							$('#high').text("");
+							$('#low').text("");
+							$('#start').text("");
+							$('#trade').text("");
+							$('#trade_price').text("");
+							$("#stock_btn").show();
+						});
+
+
+			$("html").click(function(event) {
+							if (event.target.id === "myModal") {
+								$("#myModal").css({
+									"display" : "none"
+								});
+							$('#name').text("");
+							$('#code').text("");
+							$('#today h2').text("");
+							$('#today p').text("");
+							$('#yest').text("");
+							$('#high').text("");
+							$('#low').text("");
+							$('#start').text("");
+							$('#trade').text("");
+							$('#trade_price').text("");
+							$("#stock_btn").show();
+							}
+						});
+
+
+
+
+			$("#stock_btn").click(function() {
+							var name = $('#name').text();
+							console.log(name);
+							var loding = "<img id=\"loding_img\" src=\"{{ url_for('static',filename='img/img_loading.gif')}}\">";
+
+							
+
+							var stock_img = "<img id='loding_img' src='{{ url_for('static',filename='stock_img/\"+name+\".png')}}'>";
+
+
+							console.log(stock_img);
+
+							$("#stock_btn").hide();
+							$(".stock_img").html(loding);
+
+							
+
+							$.ajax({
+								url : "/analysis/"+name,
+								success : function(data) {
+									console.log("요청완료");
+									
+									console.log(data);
+									if(data == "1"){
+										$(".stock_img").html(stock_img);
+									}else{
+										$(".stock_img").html("<h2>분석 중 오류가 발생하였습니다. 잠시후 다시 시도해주세요.</h2>");
+									}
+								},
+								error : function(e) {
+									alert("요청실패");
+									$("#stock_btn").show();
+									$(".stock_img").html("");
+									console.log(e);
+								}
+
+			});
+
+
+						});
+
+</script>
+</body>
+</html>

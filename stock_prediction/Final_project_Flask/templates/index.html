@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="kr">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+	$(function() {
+		$('#onBtn').click(function() {
+			status('On');		});
+		$('#offBtn').click(function() {
+			status('Off');		});
+		function status(str) {
+			$.ajax({
+				url : 'param?status=' + str,
+				success : function(data) {
+					console.log(data)
+					$('#target').html(str)
+				}});
+		};
+	});
+</script>
+<link rel="stylesheet"
+	href="{{ url_for('static',filename='css/main.css')}}">
+</head>
+<body>
+	<h1>mytest</h1>
+	<header>
+		<div>반가워요</div>
+	</header>
+
+	<div style="width: 300px; margin: auto">
+		<img id="onBtn" src="{{ url_for('static',filename='img/on.jpg')}}"
+			style="width: 100px; cursor: pointer">&nbsp; <img id="offBtn"
+			src="{{ url_for('static',filename='img/off.jpg')}}"
+			style="width: 100px; cursor: pointer">
+	</div>
+	<div style="width: 300px; margin: auto" id="target"></div>
+</body>
+</html>
